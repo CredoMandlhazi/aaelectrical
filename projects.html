@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | AA Electrical</title>
+  <meta name="description" content="AA Electrical project portfolio – commercial, industrial and residential electrical installations across South Africa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <script src="js/loader.js"></script>
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  <style>
+    .filter-bar {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 8px 20px; border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: transparent; font-size: 13px;
+      font-weight: 700; color: var(--mid);
+      cursor: pointer; font-family: "Nunito", sans-serif;
+      transition: background .2s, border-color .2s, color .2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--blue); border-color: var(--blue); color: white;
+    }
+    .full-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .proj-card {
+      border-radius: 14px; overflow: hidden;
+      background: var(--navy); position: relative;
+      min-height: 280px; cursor: pointer;
+      transition: transform .3s;
+    }
+    .proj-card:hover { transform: scale(1.025); }
+    .proj-card.span2 { grid-column: span 2; min-height: 340px; }
+    @media (max-width: 768px) {
+      .full-projects-grid { grid-template-columns: 1fr; }
+      .proj-card.span2 { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="services.html">Services</a><a href="projects.html">Projects</a>
+  <a href="equipment.html">Equipment</a><a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-menu-cta">Request a Quote</a>
+</div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="AA Electrical"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Request a Quote</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="section-tag light">Our Portfolio</div>
+    <h1>Project Portfolio</h1>
+    <p>Delivering precision electrical systems across South Africa's most demanding residential, commercial, and industrial developments.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <button class="filter-btn active">All Projects</button>
+      <button class="filter-btn">Commercial</button>
+      <button class="filter-btn">Industrial</button>
+      <button class="filter-btn">Residential</button>
+      <button class="filter-btn">Infrastructure</button>
+    </div>
+
+    <div class="full-projects-grid">
+
+      <!-- Row 1 -->
+      <div class="proj-card span2 reveal">
+        <div class="project-visual">
+          <svg viewBox="0 0 600 340" fill="none" style="width:100%;height:100%;">
+            <rect width="600" height="340" fill="#0d2850"/>
+            <rect x="60" y="160" width="480" height="150" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="80"  y="180" width="50" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <rect x="150" y="180" width="50" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <rect x="220" y="180" width="50" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <rect x="290" y="180" width="50" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <rect x="360" y="180" width="50" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <rect x="430" y="180" width="50" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <rect x="500" y="180" width="40" height="60" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.03)"/>
+            <line x1="60" y1="140" x2="540" y2="140" stroke="white" stroke-width="1" opacity=".3"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Commercial</span>
+          <div class="project-title">Large-Scale Shopping Centre Electrification</div>
+          <div class="project-desc">Complete MV/LV reticulation, distribution boards, emergency systems, and tenant fitouts. Scope included transformer rooms, backup generation, and ELV systems.</div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-1">
+        <div class="project-visual">
+          <svg viewBox="0 0 300 280" fill="none" style="width:100%;height:100%;">
+            <rect width="300" height="280" fill="#0d2850"/>
+            <rect x="30" y="160" width="60" height="90" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="110" y="130" width="60" height="120" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="195" y="145" width="60" height="105" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <line x1="0" y1="250" x2="300" y2="250" stroke="white" stroke-width="1.5" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Residential</span>
+          <div class="project-title">Housing Estate Infrastructure</div>
+          <div class="project-desc">Bulk reticulation and street lighting for multi-unit residential developments.</div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="proj-card reveal">
+        <div class="project-visual">
+          <svg viewBox="0 0 300 280" fill="none" style="width:100%;height:100%;">
+            <rect width="300" height="280" fill="#0d2850"/>
+            <rect x="30" y="60" width="240" height="190" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <line x1="30" y1="110" x2="270" y2="110" stroke="white" stroke-width="1" opacity=".3"/>
+            <line x1="30" y1="160" x2="270" y2="160" stroke="white" stroke-width="1" opacity=".3"/>
+            <line x1="100" y1="60" x2="100" y2="250" stroke="white" stroke-width="1" opacity=".3"/>
+            <line x1="170" y1="60" x2="170" y2="250" stroke="white" stroke-width="1" opacity=".3"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Industrial</span>
+          <div class="project-title">Factory Electrical Installation</div>
+          <div class="project-desc">High-capacity electrical systems, motor control centres, and distribution boards for manufacturing plant.</div>
+        </div>
+      </div>
+
+      <div class="proj-card span2 reveal delay-1">
+        <div class="project-visual">
+          <svg viewBox="0 0 600 280" fill="none" style="width:100%;height:100%;">
+            <rect width="600" height="280" fill="#0d2850"/>
+            <rect x="0" y="200" width="600" height="80" fill="rgba(255,255,255,0.02)"/>
+            <line x1="80" y1="60" x2="80" y2="200" stroke="#1C6CFF" stroke-width="2.5" opacity=".7"/>
+            <line x1="80" y1="80" x2="120" y2="70" stroke="#1C6CFF" stroke-width="2" opacity=".7"/>
+            <ellipse cx="130" cy="68" rx="12" ry="6" fill="#00E5FF" opacity=".8"/>
+            <line x1="250" y1="50" x2="250" y2="200" stroke="#1C6CFF" stroke-width="2.5" opacity=".7"/>
+            <line x1="250" y1="70" x2="290" y2="60" stroke="#1C6CFF" stroke-width="2" opacity=".7"/>
+            <ellipse cx="300" cy="58" rx="12" ry="6" fill="#00E5FF" opacity=".8"/>
+            <line x1="420" y1="60" x2="420" y2="200" stroke="#1C6CFF" stroke-width="2.5" opacity=".7"/>
+            <line x1="420" y1="80" x2="460" y2="70" stroke="#1C6CFF" stroke-width="2" opacity=".7"/>
+            <ellipse cx="470" cy="68" rx="12" ry="6" fill="#00E5FF" opacity=".8"/>
+            <path d="M80,200 Q165,210 250,200 Q335,190 420,200" stroke="#1C6CFF" stroke-width="1.5" fill="none" stroke-dasharray="6 4" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Infrastructure</span>
+          <div class="project-title">Municipal Street Lighting Network</div>
+          <div class="project-desc">Design and installation of a comprehensive street lighting network including poles, luminaires, underground cabling, and switching infrastructure for a major residential development.</div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="proj-card reveal">
+        <div class="project-visual">
+          <svg viewBox="0 0 300 280" fill="none" style="width:100%;height:100%;">
+            <rect width="300" height="280" fill="#0d2850"/>
+            <rect x="70" y="50" width="160" height="200" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="90" y="70"  width="35" height="28" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="145" y="70" width="35" height="28" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="195" y="70" width="35" height="28" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="90" y="115" width="35" height="28" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="145" y="115" width="35" height="28" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Commercial</span>
+          <div class="project-title">Office Park Electrical Systems</div>
+          <div class="project-desc">Full electrical installations for multi-storey office blocks and mixed-use commercial developments.</div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-1">
+        <div class="project-visual">
+          <svg viewBox="0 0 300 280" fill="none" style="width:100%;height:100%;">
+            <rect width="300" height="280" fill="#0d2850"/>
+            <rect x="40" y="80" width="220" height="170" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="60" y="100" width="35" height="35" rx="2" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="115" y="100" width="35" height="35" rx="2" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="170" y="100" width="35" height="35" rx="2" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="60" y="155" width="35" height="35" rx="2" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="115" y="155" width="35" height="35" rx="2" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="170" y="155" width="35" height="35" rx="2" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Industrial</span>
+          <div class="project-title">Warehouse Electrical Infrastructure</div>
+          <div class="project-desc">High-bay lighting, distribution boards, and power supply infrastructure for large-scale logistics facilities.</div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal delay-2">
+        <div class="project-visual">
+          <svg viewBox="0 0 300 280" fill="none" style="width:100%;height:100%;">
+            <rect width="300" height="280" fill="#0d2850"/>
+            <rect x="40" y="100" width="80" height="130" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="140" y="80"  width="80" height="150" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="230" y="90"  width="35" height="140" stroke="white" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+            <rect x="55"  y="115" width="20" height="20" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="85"  y="115" width="20" height="20" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="155" y="100" width="20" height="20" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+            <rect x="185" y="100" width="20" height="20" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+          </svg>
+        </div>
+        <div class="project-overlay"></div>
+        <div class="project-info">
+          <span class="project-tag">Renovation</span>
+          <div class="project-title">Building Electrical Upgrades</div>
+          <div class="project-desc">Comprehensive rewiring and system upgrades for existing commercial buildings to meet current standards.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-h2 light reveal" style="max-width:500px;margin:0 auto 20px;">Start Your Project<br>With Us Today</h2>
+    <div class="reveal delay-1" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
+      <a href="contact.html" class="btn-primary">Request a Quote</a>
+      <a href="services.html" class="btn-outline">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-wrap"><img src="assets/logo.png" alt="AA Electrical"></div>
+      <p>South Africa's trusted electrical infrastructure and construction contractors since 1987.</p>
+      <div class="footer-pills">
+        <span class="footer-pill">Installation</span>
+        <span class="footer-pill">Reticulation</span>
+        <span class="footer-pill">Construction</span>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Navigation</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li>
+      <li><a href="equipment.html">Equipment</a></li><li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="services.html">Reticulation</a></li>
+      <li><a href="services.html">Street Lighting</a></li>
+      <li><a href="services.html">Commercial</a></li>
+      <li><a href="services.html">Industrial</a></li>
+      <li><a href="services.html">Residential</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul>
+      <li><a href="tel:+27125663752">Office: +27 12 566 3752</a></li>
+      <li><a href="tel:+27825641350">Frikkie: +27 82 564 1350</a></li>
+      <li><a href="tel:+27723421627">Duane: +27 72 342 1627</a></li>
+      <li><a href="contact.html">Pretoria, Gauteng</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2024 AA Electrical. All rights reserved.</span>
+    <span>Electrical Infrastructure &amp; Construction Contractors</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Filter buttons (visual only – no JS filter needed for static site)
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
