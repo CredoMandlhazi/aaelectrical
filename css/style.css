@@ -424,9 +424,10 @@
    }
 
    .hero-logo img {
+     right: 5%;  
      width: 420px;
      max-width: 40vw;
-     opacity: 0.50;
+     opacity: 0.70;
      filter: brightness(0) invert(1);
      filter: brightness(0) invert(1) drop-shadow(0 0 20px rgba(0,229,255,0.25));
    }
