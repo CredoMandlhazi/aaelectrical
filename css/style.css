@@ -34,7 +34,6 @@
      background: var(--white);
      overflow-x: hidden;
      cursor: auto;
-     padding-top: 80px;
    }
    img { display: block; max-width: 100%; }
    a { text-decoration: none; color: inherit; }
@@ -63,7 +62,7 @@
    
    /* ── NAVBAR ── */
   #navbar {
-    position: sticky; /* sticky at top */
+    position: fixed; /* sticky at top */
     top: 0;
     left: 0;
     right: 0;
@@ -145,7 +144,7 @@
 
    .nav-cta::after { display: none !important; }
    #hero{
-      margin-top: 72px;
+      margin-top: 80px;
    }
    
    /* hamburger */
@@ -206,7 +205,7 @@
    
    /* ── SHARED LAYOUT ── */
    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
-   .section { padding: var(--section-pad) 5%; }
+   .section { padding: var(--section-pad) 5%; padding-top:120px;}
    .section-dark { background: var(--navy); }
    .section-grey { background: var(--grey); }
    
