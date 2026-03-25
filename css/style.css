@@ -335,7 +335,6 @@
    }
    .hero-circuit {
      position: absolute; right: -80px; top: 50%;
-     transform: translateY(-50%); width: 560px; height: 560px; opacity: 0.1;
    }
    .hero-content {
      position: relative; z-index: 2;
