@@ -34,6 +34,7 @@
      background: var(--white);
      overflow-x: hidden;
      cursor: auto;
+     padding-top: 80px;
    }
    img { display: block; max-width: 100%; }
    a { text-decoration: none; color: inherit; }
@@ -62,12 +63,13 @@
    
    /* ── NAVBAR ── */
   #navbar {
-    position: fixed; /* sticky at top */
+    position: sticky; /* sticky at top */
     top: 0;
     left: 0;
     right: 0;
     height: 72px;
-    z-index: 9999; /* make sure it's on top */
+    z-index: 1000;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -164,6 +166,9 @@
    
    /* Mobile full-screen menu */
    .mobile-menu {
+     top: 80px;
+     left: 0;
+     width: 100%;
      position: fixed; inset: 0;
      background: var(--navy);
      z-index: 850;
