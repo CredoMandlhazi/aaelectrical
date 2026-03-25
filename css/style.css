@@ -318,7 +318,7 @@
     padding-top: 72px;    /* same as navbar height */
     display: flex;
     align-items: center;
-    overflow: visible;    /* so hero circuit SVG is not clipped */
+    overflow: hidden;
   }
    .hero-bg {
      position: absolute; inset: 0;
@@ -912,8 +912,8 @@
      animation: pageIn .5s var(--ease) forwards;
    }
    @keyframes pageIn {
-     from { opacity: 0; }
-     to   { opacity: 1; }
+     from { opacity: 0; transform: translateY(12px); }
+     to   { opacity: 1; transform: translateY(0); }
    }
    @media (max-width: 900px){
       #navbar {
