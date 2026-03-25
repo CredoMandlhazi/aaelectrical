@@ -142,14 +142,14 @@
   }
 
    .nav-cta::after { display: none !important; }
-   body {
-  padding-top: 72px;  /* equal to navbar height to avoid overlap */
-}
+   #hero{
+      margin-top: 72px;
+   }
    
    /* hamburger */
    .hamburger {
      display: none; flex-direction: column;
-     gap: 5px; cursor: pointer; padding: 4px;
+     gap: 5px; cursor: pointer; padding: 10px;
      z-index: 1001;
    }
    .hamburger span {
@@ -169,7 +169,7 @@
      z-index: 850;
      display: flex; flex-direction: column;
      align-items: flex-start; justify-content: center;
-     padding: 10px 5% 40px;
+     padding: 80px 24px 40px;
      gap: 0;
      transform: translateX(100%);
      transition: transform .5s cubic-bezier(0.76,0,0.24,1);
@@ -895,4 +895,9 @@
    @keyframes pageIn {
      from { opacity: 0; transform: translateY(12px); }
      to   { opacity: 1; transform: translateY(0); }
+   }
+   @media (max-width: 900px){
+      #navbar {
+         padding: 0 20px;
+      }
    }
