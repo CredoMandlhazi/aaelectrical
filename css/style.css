@@ -62,7 +62,7 @@
    
    /* ── NAVBAR ── */
   #navbar {
-    position: sticky; /* sticky at top */
+    position: fixed; /* sticky at top */
     top: 0;
     left: 0;
     height: 72px;
@@ -141,9 +141,6 @@
   }
 
    .nav-cta::after { display: none !important; }
-   #hero{
-      margin-top: 72px;
-   }
    
    /* hamburger */
    .hamburger {
@@ -316,7 +313,7 @@
    /* ── HOME HERO ── */
    #hero {
      position: relative; height: 100vh; min-height: 700px;
-     display: flex; align-items: center; background: var(--navy); overflow: hidden;
+     display: flex; align-items: center; background: var(--navy); overflow: hidden; margin-top: 72px;
    }
    .hero-bg {
      position: absolute; inset: 0;
