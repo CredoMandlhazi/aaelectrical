@@ -66,7 +66,7 @@
     top: 0;
     left: 0;
     height: 72px;
-    z-index: 1000;
+    z-index: 10000;
     width: 100%;
     display: flex;
     align-items: center;
@@ -331,15 +331,15 @@
      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
    }
    .hero-circuit {
-     position: absolute;          /* stays in hero */
-     right: -80px;                /* offset from right edge */
-     top: 50%;                    /* center vertically */
-     margin-top: -280px;          /* negative half of height to truly center */
+     position: absolute; /* stay in hero section */
+     top: 50%;
+     right: 0; /* keep inside the hero */
+     transform: translateY(-50%);
      width: 560px;
      height: 560px;
      opacity: 0.1;
-     pointer-events: none;        /* so it doesn't block clicks */
-     z-index: 1;                  /* behind hero content */
+     z-index: 1; /* lower than navbar, higher than background */
+     pointer-events: none; /* optional, prevents hover issues */
    }
    .hero-content {
      position: relative; z-index: 2;
