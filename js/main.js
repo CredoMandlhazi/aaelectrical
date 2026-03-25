@@ -186,20 +186,18 @@
 
      const subject = encodeURIComponent("AA Electrical Quote Request");
 
-     const body = encodeURIComponent(
-      `Name: ${name}
-      Email: ${email}
-      Phone: ${phone}
-      Company: ${company}
-      Project Type: ${type}
+     const body =
+       "Name: " + name + "%0D%0A" +
+       "Email: " + email + "%0D%0A" +
+       "Phone: " + phone + "%0D%0A" +
+       "Company: " + company + "%0D%0A" +
+       "Project Type: " + type + "%0D%0A%0D%0A" +
+       "Project Description:%0D%0A" +
+       desc;
 
-      Project Description:
-      ${desc}`
-        );
-
-        window.location.href =
-        `mailto:duane@aaelectrical.co.za?subject=${subject}&body=${body}`;
-      });  
+     window.location.href =
+       "mailto:duane@aaelectrical.co.za?subject=" + subject + "&body=" + body;
+   });
   
     // ── HERO PARALLAX ───────────────────────────────
     const heroContent = document.querySelector('.hero-content');
