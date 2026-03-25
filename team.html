@@ -154,17 +154,22 @@
       background: var(--border);
     }
 
+    /* Directors: 2-col on desktop, 1-col on mobile */
+    .team-grid-directors { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+    /* Support: 3-col on desktop */
+    .team-grid-support { grid-template-columns: repeat(3, 1fr); max-width: 900px; }
+
     @media (max-width: 1100px) {
       .team-grid-full { grid-template-columns: repeat(4, 1fr); }
     }
     @media (max-width: 900px) {
-      .team-grid-full { grid-template-columns: repeat(3, 1fr); }
+      .team-grid-full { grid-template-columns: repeat(2, 1fr); }
+      .team-grid-support { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
     }
     @media (max-width: 600px) {
-      .team-grid-full { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 400px) {
       .team-grid-full { grid-template-columns: 1fr; }
+      .team-grid-directors { grid-template-columns: 1fr; max-width: 100%; }
+      .team-grid-support { grid-template-columns: 1fr; max-width: 100%; }
     }
   </style>
 </head>
@@ -213,7 +218,7 @@
     <p class="section-lead reveal delay-1">Our directors are actively involved in every project, maintaining the highest standards of quality and client service.</p>
 
     <!-- Directors -->
-    <div class="team-grid-full" style="grid-template-columns:repeat(2,1fr);max-width:600px;">
+    <div class="team-grid-full team-grid-directors">
 
       <div class="contact-card featured reveal">
         <div class="card-header">
@@ -344,7 +349,7 @@
     <!-- Support Team -->
     <div class="dept-label reveal">Operations &amp; Support</div>
 
-    <div class="team-grid-full" style="grid-template-columns:repeat(3,1fr);max-width:900px;">
+    <div class="team-grid-full team-grid-support">
 
       <div class="contact-card reveal">
         <div class="card-header">
