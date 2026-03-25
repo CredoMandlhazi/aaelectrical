@@ -806,7 +806,7 @@
    }
    #leaflet-map { height: 500px; width: 100%; }
    .map-info-card {
-     position: absolute; top: 20px; left: 20px;
+     position: absolute; bottom: 20px; left: 20px;
      background: var(--white); border-radius: 12px;
      padding: 22px; z-index: 1000;
      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
