@@ -394,10 +394,14 @@
      animation: fadeUpIn .9s var(--ease) .8s forwards;
    }
    .hero-stats {
-     position: absolute; bottom: 52px; left: 0; right: 0;
-     padding: 0 5%; max-width: var(--max-w); margin: 0 auto;
-     display: flex; gap: 56px;
-     opacity: 0; animation: fadeUpIn 1s var(--ease) 1.1s forwards;
+    position: relative; /* was absolute */
+    margin-top: auto;   /* pushes it down inside hero */
+    padding: 0 5%;
+    max-width: var(--max-w);
+    display: flex;
+    gap: 56px;
+    opacity: 0; 
+    animation: fadeUpIn 1s var(--ease) 1.1s forwards;
    }
    .hero-stat {
      border-left: 2px solid rgba(28,108,255,0.5);
