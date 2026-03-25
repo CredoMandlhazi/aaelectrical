@@ -62,7 +62,7 @@
    
    /* ── NAVBAR ── */
   #navbar {
-    position: fixed; /* sticky at top */
+    position: sticky; /* sticky at top */
     top: 0;
     left: 0;
     height: 72px;
@@ -334,7 +334,15 @@
      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
    }
    .hero-circuit {
-     position: absolute; right: -80px; top: 50%;
+     position: absolute;          /* stays in hero */
+     right: -80px;                /* offset from right edge */
+     top: 50%;                    /* center vertically */
+     margin-top: -280px;          /* negative half of height to truly center */
+     width: 560px;
+     height: 560px;
+     opacity: 0.1;
+     pointer-events: none;        /* so it doesn't block clicks */
+     z-index: 1;                  /* behind hero content */
    }
    .hero-content {
      position: relative; z-index: 2;
