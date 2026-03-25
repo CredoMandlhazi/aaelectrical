@@ -414,6 +414,20 @@
      font-size: 11px; color: rgba(255,255,255,0.4);
      letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px;
    }
+   .hero-logo {
+     position: absolute;
+     right: 5%;
+     top: 50%;
+     transform: translateY(-50%);
+     opacity: 0.08;
+     pointer-events: none;
+   }
+
+   .hero-logo img {
+     width: 420px;
+     max-width: 40vw;
+   }
+
    @keyframes fadeUpIn { to { opacity:1; transform:translateY(0); } }
    
    /* ── ABOUT SECTION ── */
