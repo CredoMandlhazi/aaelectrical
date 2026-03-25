@@ -313,9 +313,13 @@
    
    /* ── HOME HERO ── */
    #hero {
-     position: relative; height: 100vh; min-height: 700px;
-     display: flex; align-items: center; background: var(--navy); overflow: hidden; margin-top: 72px;
-   }
+    position: relative;
+    min-height: 100vh;
+    padding-top: 72px;    /* same as navbar height */
+    display: flex;
+    align-items: center;
+    overflow: visible;    /* so hero circuit SVG is not clipped */
+  }
    .hero-bg {
      position: absolute; inset: 0;
      background:
