@@ -176,11 +176,7 @@
     // ── HERO PARALLAX ───────────────────────────────
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) window.addEventListener('scroll', () => {
-      if (window.scrollY < window.innerHeight) {
-      heroContent.style.transform = `translateY(${window.scrollY * 0.22}px)`;
-    } else {
-      heroContent.style.transform = '';
-    }
+      if (window.scrollY < window.innerHeight) heroContent.style.transform = `translateY(${window.scrollY * 0.22}px)`;
     }, { passive: true });
   
     // ── NUMBER COUNTER ───────────────────────────────
