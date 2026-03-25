@@ -172,6 +172,34 @@
       marker.openPopup();
       setTimeout(() => map.invalidateSize(), 150);
     }
+
+    /* CONTACT FORM EMAIL */
+   document.getElementById("contact-form").addEventListener("submit", function(e){
+     e.preventDefault();
+
+     const name = document.getElementById("f-name").value;
+     const email = document.getElementById("f-email").value;
+     const phone = document.getElementById("f-phone").value;
+     const company = document.getElementById("f-company").value;
+     const type = document.getElementById("f-type").value;
+     const desc = document.getElementById("f-desc").value;
+
+     const subject = encodeURIComponent("AA Electrical Quote Request");
+
+     const body = encodeURIComponent(
+      `Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Company: ${company}
+      Project Type: ${type}
+
+      Project Description:
+      ${desc}`
+        );
+
+        window.location.href =
+        `mailto:duane@aaelectrical.co.za?subject=${subject}&body=${body}`;
+      });  
   
     // ── HERO PARALLAX ───────────────────────────────
     const heroContent = document.querySelector('.hero-content');
